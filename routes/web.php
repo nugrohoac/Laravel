@@ -57,5 +57,9 @@ Route::get('/mahasiswa', 'ContohController@table');
 // untuk yang baru ada di sini
 Route::get('/siswa', 'ContohController@form');
 Route::get('/table02','ContohController@table02');
+Route::get('/{id}/edit','ContohController@edit');
 
 Route::post('/input', 'ContohController@insert');
+Route::post('/{id}/delete','ContohController@delete');
+
+Route::post('/{id}/edit','ContohController@update');
