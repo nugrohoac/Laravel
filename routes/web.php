@@ -48,7 +48,7 @@ Route::get('/content_lain/', function(){
    return view('content_lain'); 
 });
 
-Route::get('/input','ContohController@input');
+// Route::get('/input','ContohController@input');
 
 Route::post('/input_form_post','ContohController@input_post');
 
@@ -56,3 +56,6 @@ Route::get('/mahasiswa', 'ContohController@table');
 
 // untuk yang baru ada di sini
 Route::get('/siswa', 'ContohController@form');
+Route::get('/table02','ContohController@table02');
+
+Route::post('/input', 'ContohController@insert');

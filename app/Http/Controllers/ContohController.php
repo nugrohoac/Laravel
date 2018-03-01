@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\mahasiswaModel;
+use App\siswasModel;
 
 class ContohController extends Controller
 {
@@ -38,6 +39,24 @@ class ContohController extends Controller
     }
 
     function form(){
-        return view('input');
+        return view('siswa/inputSiswa');
+    }
+
+    function insert(Request $request){
+        $siswa = new siswasModel;
+
+            $siswa->nama    = $request->nama_siswa;
+            $siswa->alamat  = $request->alamat_siswa;
+            $siswa->no_telp = $request->no_telp_siswa;
+        
+        $siswa->save();
+        return redirect('siswa');
+    }
+
+    function table02(){
+        $siswa = siswasModel::all();                
+        return view('/siswa/table')
+        ->with('siswa',$siswa)
+        ->with('no',1);
     }
 }
