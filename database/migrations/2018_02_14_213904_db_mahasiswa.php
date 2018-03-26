@@ -16,7 +16,7 @@ class DbMahasiswa extends Migration
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',35);
-            $table->string('email')->unique();
+            $table->string('email', 100)->unique();
             $table->string('alamat',100)->nullable();
             $table->rememberToken();
             $table->timestamps();

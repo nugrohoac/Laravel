@@ -54,6 +54,8 @@ Route::post('/input_form_post','ContohController@input_post');
 
 Route::get('/mahasiswa', 'ContohController@table');
 
+Route::get('/cek','ContohController@table');
+
 // untuk yang baru ada di sini
 Route::get('/siswa', 'ContohController@form');
 Route::get('/table02','ContohController@table02');

@@ -1,11 +1,11 @@
 @extends('../layouts/layout')
 
 @section('title')
-    Siswa
+    {{ $nug }}
 @endsection
 
 @section('content')
-    <table border="1">
+    <table border="3">
         <tr>
             <td>No</td>
             <td>Nama</td>
@@ -14,7 +14,7 @@
         </tr> 
 
         <?php
-            $no = 1;
+            $no = 11;
         ?>
 
     @foreach ($mahasiswa as $data)
@@ -27,6 +27,7 @@
         <?php
             $no++;
         ?>
+        
     @endforeach
 
     </table>

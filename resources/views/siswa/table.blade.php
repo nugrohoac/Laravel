@@ -1,5 +1,9 @@
 @extends('../layouts/layout')
 
+<script>
+    function ConfirmDelete()
+</script>
+
 @section('title')
     Table Siswa
 @endsection
@@ -28,7 +32,7 @@
 
                 <form method="POST" action="/{{ $data->id }}/delete">
                     {{ csrf_field() }}
-                    <input type="submit" name="_delete" value="Delete"></input>
+                    <input id="delete" onclick="ConfirmDelete()" type="submit" name="_delete" value="Delete"></input>
                 </form>
             </td>
         </tr>
