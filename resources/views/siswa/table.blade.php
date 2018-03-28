@@ -6,6 +6,9 @@
 
 @section('content')
     <div class="container">
+        @if( Session::has('message') )
+            <span class="label label-success"> {{ Session::get('message') }} </span>
+        @endif
         <a href="{{ url('siswa') }}">Tambah Data</a>
         <table border="1" width="60%">
             <tr>

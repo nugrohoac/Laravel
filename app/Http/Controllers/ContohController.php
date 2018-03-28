@@ -66,7 +66,8 @@ class ContohController extends Controller
         //$sisw = $siswasModel::where('nama', '=' , $id);
         $siswa->delete();
 
-        return redirect('/table02');
+        return redirect('/table02')
+            ->with('message', 'sukses hapus data');
     }
 
     function edit($id){
